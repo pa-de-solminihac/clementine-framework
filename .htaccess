@@ -1,0 +1,57 @@
+AddDefaultCharset UTF-8
+RewriteEngine On
+
+# Redirige tout vers l'index : c'est le point d'entree du MVC
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
+
+# Pour plus de securite, on redirige aussi l'appel à ces fichiers même s'ils existent vers la 404
+RewriteRule ^.*\.ini index.php [L]
+RewriteRule ^.*\.svn index.php [L]
+RewriteRule ^.*\.install_temp index.php [L]
+
+# Utilise la page d'erreur 404 meme pour les URL non reecrites
+RewriteCond %{ENV:REDIRECT_STATUS} !=404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* err404/index [L]
+
+# Forcer l'activation du cache (site en production)
+<IfModule mod_expires.c>
+    <FilesMatch "(?i)^.*\.(ico|flv|swf|jpg|jpeg|png|gif|js|css)$">
+        ExpiresActive On
+        ExpiresDefault "access plus 5 seconds"
+        ExpiresByType image/jpg "access plus 5 seconds" 
+        ExpiresByType image/jpeg "access plus 5 seconds" 
+        ExpiresByType image/png "access plus 5 seconds" 
+        ExpiresByType image/gif "access plus 5 seconds" 
+        ExpiresByType image/ico "access plus 5 seconds" 
+        ExpiresByType image/icon "access plus 5 seconds" 
+        ExpiresByType image/x-icon "access plus 5 seconds" 
+        ExpiresByType text/css "access plus 5 seconds" 
+        ExpiresByType text/javascript "access plus 5 seconds" 
+        ExpiresByType text/html "access plus 5 seconds" 
+        ExpiresByType application/xhtml+xml "access plus 5 seconds" 
+        ExpiresByType application/javascript "access plus 5 seconds" 
+        ExpiresByType application/x-javascript "access plus 5 seconds" 
+        ExpiresByType application/x-shockwave-flash "access plus 5 seconds"  
+        <IfModule mod_headers.c>
+            Header set Cache-Control "public, no-transform"
+        </IfModule>
+    </FilesMatch>
+    <IfModule mod_deflate.c>
+        <FilesMatch "\.(js|css)$">
+            SetOutputFilter DEFLATE
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+# Force la desactivation du cache (site en developpement)
+#<IfModule mod_headers.c>
+#    FileETag None
+#    Header unset ETag
+#    <IfModule mod_expires.c>
+#        Header set Expires "Fri, 01 Jan 1970 00:00:00 GMT"
+#    </IfModule>
+#    Header set Cache-Control "public, no-transform, no-store, no-cache, must-revalidate, pre-check=0, post-check=0, max-age=0"
+#</IfModule>
