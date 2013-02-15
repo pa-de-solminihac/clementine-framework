@@ -1,7 +1,7 @@
 [Clementine : PHP MVC framework, UNIX philosophy](http://clementine.quai13.com/)
 ====================
 
-Clementine est un framework MVC pour PHP
+Clementine est un framework MVC pour PHP. Clementine est un logiciel libre sous licence MIT.
 
 Simple
 ---
