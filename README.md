@@ -5,29 +5,28 @@ Clementine est un framework MVC pour PHP
 
 Simple
 ---
-* Architecture MVC avec front controller unique (MVC2)
-* Pas de code généré difficile à maintenir, pas de fichiers de cache illisibles dont on ne retrouve plus la source
-* Debug facilité... ne laissez plus passer une Notice (allez, on code proprement !)
+* Architecture MVC avec _front controller_ unique (MVC2)
+* Pas de _code généré_ difficile à maintenir, pas de _fichiers de cache_ illisibles dont on ne retrouve plus la source
+* Debug facilité : ne laissez plus passer une _Notice_, vous pouvez même être prévenu par e-mail (allez, on code proprement !)
 
 Flexible et favorisant la réutilisation
 ---
 Grâce à des fonctionnalités uniques :
-* Héritage implicite - héritage à tous les niveaux : configuration, contrôleurs, modèles, helpers, vues, et même des modules entiers
-* Tout est surchargeable, jusqu'au coeur du framework... ne râlez plus parce qu'un hook manque : vous n'en aurez (presque) plus jamais besoin.
-* Modules fortement découplés et réorganisables, comme les calques dans Photoshop/Gimp. 
-* Injection de dépendances systématique.
+* Héritage **implicite**, à tous les niveaux : configuration, contrôleurs, modèles, helpers, vues, et même des modules entiers
+* **Tout est surchargeable**, jusqu'au coeur du framework... ne râlez plus parce qu'un hook manque : vous n'en aurez (presque) plus jamais besoin.
+* Modules fortement découplés et réorganisables, comme les calques dans _Photoshop ou Gimp_. 
+* Injection de dépendances **systématique** :
 
-Par exemple si 
+Par exemple si vous avez
 
     class Robin extends Batman
     
-vous pouvez injecter une dépendance Joker entre les deux, sans modifier une seule ligne de Robin ni Batman.
+Clémentine vous permettra toujours d'injecter une dépendance **_Joker_** entre les deux, sans modifier une seule ligne de _Robin_ ni _Batman_.
 
-Alors, le framework comprendra **automatiquement** que 
+Ainsi, le framework comprendra **automatiquement** que :
 
     class Robin extends Joker
     class Joker extends Batman
-
 
 Performant
 ---
