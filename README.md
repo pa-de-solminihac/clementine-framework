@@ -2,7 +2,6 @@
 ====================
 
 Clementine est un framework MVC pour PHP
----
 
 Simple
 ---
