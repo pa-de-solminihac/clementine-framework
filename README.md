@@ -3,7 +3,7 @@
 
 Installation
 ---
-    git clone --recursive git@github.com:pa-de-solminihac/clementine-framework.git <dossier>
+    git clone --recursive git://github.com/pa-de-solminihac/clementine-framework.git <dossier>
 
 Présentation
 ====
