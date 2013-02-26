@@ -1,6 +1,13 @@
 [Clementine : PHP MVC framework, UNIX philosophy](http://clementine.quai13.com/)
 ====================
 
+Installation
+---
+    git clone --recursive git@github.com:pa-de-solminihac/clementine-framework.git <dossier>
+
+Présentation
+====
+
 Clementine est un framework MVC2 pour PHP sous licence MIT.
 
 Simple
@@ -9,9 +16,9 @@ Simple
 * Pas de _code généré_ difficile à maintenir, pas de _fichiers de cache_ illisibles dont on ne retrouve plus la source
 * Debug facilité : ne laissez plus passer une _Notice_, vous pouvez même être prévenu par e-mail (allez, on code proprement !)
 
-Flexible et favorisant la réutilisation
+Modulaire
 ---
-Grâce à des fonctionnalités uniques :
+Modulaire dans l'âme grâce à ses fonctionnalités uniques. Cela favorise la flexibilité et la réutilisation :
 * Héritage **implicite**, à tous les niveaux : configuration, contrôleurs, modèles, helpers, vues, et même des modules entiers
 * **Tout est surchargeable**, jusqu'au coeur du framework... ne râlez plus parce qu'un hook manque : vous n'en aurez (presque) plus jamais besoin.
 * Modules fortement découplés et réorganisables, comme les calques dans _Photoshop ou Gimp_. 
@@ -40,12 +47,6 @@ Avec un installeur
 * Gestion de branches de développement multiples
 * Utilisez votre propre dépôt de modules si vous voulez (petit control freak, va)
 * Sauvegarde, et restauration en cas d'échec
-
-Installation
----
-    git clone --recursive git@github.com:pa-de-solminihac/clementine-framework.git <dossier>
-
-
 
 En savoir plus
 ---
