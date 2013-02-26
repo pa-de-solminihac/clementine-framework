@@ -41,6 +41,12 @@ Avec un installeur
 * Utilisez votre propre dépôt de modules si vous voulez (petit control freak, va)
 * Sauvegarde, et restauration en cas d'échec
 
+Installation
+---
+    git clone --recursive git@github.com:pa-de-solminihac/clementine-framework.git <dossier>
+
+
+
 En savoir plus
 ---
 [Page de description](http://clementine.quai13.com/)
