@@ -1,9 +1,13 @@
 <?php
 /* Ce block est appelé automatiquement par Clémentine, qui lui passe pour */
 /* paramètre $data le tableau $this->data rempli dans le contrôleur. */
-$this->getBlock('index/header', $data);
+$this->getBlock('design/header', $data);
 ?>
-<h1><?php echo $data['titre']; ?></h1>
+<h1><?php
+if (!empty($data['titre'])) {
+    echo $data['titre'];
+}
+?></h1>
 <p>
     Le <em>contrôleur</em> de cette page est dans le fichier :
     <pre><?php echo $data['fichier_controleur']; ?></pre>
@@ -31,5 +35,5 @@ log_errors=1
 
 </p>
 <?php
-$this->getBlock('index/footer', $data);
+$this->getBlock('design/footer', $data);
 ?>

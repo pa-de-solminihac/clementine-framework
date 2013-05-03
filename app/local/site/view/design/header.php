@@ -2,7 +2,11 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=<?php echo __HTML_ENCODING__; ?>">
-    <title><?php echo $data['titre']; ?></title>
+    <title><?php
+if (!empty($data['titre'])) {
+    echo $data['titre'];
+}
+?></title>
     <style type="text/css" media="screen">
 html,
 body {
