@@ -3,7 +3,9 @@
 
 Installation
 ---
-    git clone --recursive git://github.com/pa-de-solminihac/clementine-framework.git <dossier>
+* Grab [latest version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip)
+* Unzip to __my_directory__
+* Point your browser to __my_diretory__ and follow instructions
 
 Présentation
 ====
