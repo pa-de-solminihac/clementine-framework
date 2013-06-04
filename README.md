@@ -5,7 +5,7 @@ Installation
 ---
 * Récupérez la [dernière version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip)
 * Décompressez la dans un dossier __my_directory__
-* Ouvrez le dossier __my_diretory__ dans votre navigateur et laissez vous guider...
+* Ouvrez le dossier __my_directory__ dans votre navigateur et laissez vous guider...
 
 Présentation
 ====
