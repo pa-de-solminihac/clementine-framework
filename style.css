@@ -1,0 +1,86 @@
+.clearfix:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: ".";
+    line-height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+html {
+    font-family: Rambla, Arial, sans-serif;
+}
+html,
+body,
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    margin: 0 1em;
+    text-align: center;
+}
+.col {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.col1 {
+    width: 100%;
+}
+.col2 {
+    width: 50%;
+}
+.col3 {
+    width: 33%;
+}
+.col4 {
+    width: 25%;
+}
+.logo {
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5 {
+    margin: 1.5em 0 1em;
+}
+a {
+    color: #000000;
+}
+a:focus,
+a:active,
+a:hover {
+    color: #777777;
+}
+a:focus {
+    outline: 1px solid rgba(200,200,200,.5);
+}
+.pagetitle {
+    margin-top: 0;
+    text-align: right;
+}
+.subtitle {
+    font-size: 0.5em;
+    font-style: italic;
+}
+.modules_list {
+    margin-top: 0;
+    background: #FFF4EE;
+    width: 100%;
+}
+.module_names {
+    font-weight: bold;
+    padding: 0 1em;
+    margin-top: 1em;
+}
+.module_versions {
+    margin-bottom: 1em;
+    padding: 0 1em;
+}
