@@ -1,6 +1,8 @@
 [Clementine : PHP MVC framework, UNIX philosophy](http://clementine.quai13.com/)
 ====================
 
+![Clementine Framework logo](https://pa-de-solminihac.github.io/clementine-framework/logo.jpg)
+
 Installation
 ---
 * Récupérez la [dernière version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip)
