@@ -14,40 +14,51 @@ Présentation
 
 Clementine est un framework MVC pour PHP, c'est un logiciel libre sous licence MIT.
 
-Simple
+Une expérience
 ---
-* Pas de _code généré_ difficile à maintenir, pas de _fichiers de cache_ illisibles dont on ne retrouve plus la source
-* Debug facilité : ne laissez plus passer une _Notice_, vous pouvez même être prévenu par e-mail (allez, on code proprement !)
 
-Modulaire
+Clémentine est parti d'une frustration : il n'est pas toujours simple d'adapter les librairies qu'on importe dans un projet. 
+
+Souvent, elles ont été conçus pour être flexibles, avec des hooks par exemple, mais on tombe souvent sur un cas où un hook qui nous aurait bien arrangé n'existe pas.
+
+Dans des cas un peu plus favorables, on peut utiliser de l'injection de dépendances.
+
+On étend alors les librairies importées en utilisant des classes dérivées, afin de surcharger certains comportements et on injecte nos instances de classes dérivées à la place de ceux des classes d'origine... si l'injection de dépendances a été prévue à l'endroit qui nous intéresse.
+
+Et si le framework s'occupait automatiquement d'utiliser nos classes dérivées partout, à la place des classes d'origine ?
+
+C'est ce que fait Clémentine.
+
+Un outil simple
 ---
-Modulaire dans l'âme grâce à ses fonctionnalités uniques. Cela favorise la flexibilité et la réutilisation :
-* Héritage **implicite**, à tous les niveaux : configuration, contrôleurs, modèles, helpers, vues, et même des modules entiers
-* **Tout est surchargeable**, jusqu'au coeur du framework... ne râlez plus parce qu'un hook manque : vous n'en aurez (presque) plus jamais besoin.
-* Modules fortement découplés et réorganisables, comme les calques dans _Photoshop ou Gimp_. 
-* Inversion de contrôle **systématique** :
+* Pas de _code généré_, pas de _fichiers de cache_ dont on ne retrouve plus la source : on reste sur du code interprété, plus facile à maintenir
+* Debug facilité : pour que vous ne laissiez plus passer la moindre _Notice_. Vous pouvez même être prévenu par e-mail.
+
+De la modularité partout
+---
+* Dans Clémentine, tout fonctionne sous forme de modules, même le coeur du framework... et tous les modules sont surchargeables, y compris les surcharges.
+* Le framework garantit de toujours pouvoir intercaler une classe à n'importe quel niveau de l'héritage. Comme on y prend vite goût, on a utilisé le concept partout : fichiers de configuration, contrôleurs, modèles, helpers, vues... on peut même utiliser l'héritage sur des modules entiers en quelques lignes.
 
 Par exemple si vous avez
 
     class Robin extends Batman
     
-Clémentine vous permettra toujours d'injecter une classe **_Joker_** entre les deux, sans modifier une seule ligne de _Robin_ ni _Batman_, et le framework comprendra **automatiquement** que :
+Clémentine vous permettra d'injecter une classe **_Joker_** entre les deux, sans modifier une seule ligne de _Robin_ ni _Batman_, et le framework comprendra **automatiquement** que :
 
     class Robin extends Joker
     class Joker extends Batman
 
-Performant
+Les performances sont excellentes
 ---
-Par principe, ne serait-ce que pour l'honneur. Utilisation d'APC si disponible.
+Ce n'est pas parce qu'on n'utilise pas de code généré ou de fichiers cache que ça doit ramer... et ça ne rame pas du tout, promis !
 
-Avec un installeur et des modules
+Lancez l'installeur, installez vos premiers modules
 ---
-* Pour la première install comme pour les mises à jour
-* Gestion de dépendances
-* Gestion des migrations de la base de données
-* Gestion de branches de développement multiples
-* Utilisez votre propre dépôt de modules si vous voulez (petit control freak, va)
+* Pour la première installation
+* Pour la gestion des mises à jour et migrations de la base de données
+* Pour la gestion des dépendances. Vous pouvez même coller à des branches de développement si vous n'êtes pas prêt pour un passage de version majeure sans casser toute la compatibilité
 * Sauvegarde, et restauration en cas d'échec
+* Utilisez votre propre dépôt de modules si vous voulez (petit control freak ;))
 
 En savoir plus
 ---
