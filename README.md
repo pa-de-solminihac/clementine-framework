@@ -5,13 +5,9 @@
 
 Installation
 ---
-* Récupérez la [dernière version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip) et décompressez la dans un dossier de votre choix, par exemple __clementine-framework-master__ :
-```bash
-wget -qO- https://github.com/pa-de-solminihac/clementine-framework/archive/master.tar.gz | tar -zxf -
-```
-
-* Faites pointer votre navigateur vers le dossier créé à l'étape précédente et laissez vous guider par l'installeur :
-[http://localhost/clementine-framework-master/](http://localhost/clementine-framework-master/)
+* Récupérez la [dernière version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip) et décompressez la dans un dossier __my_directory__
+* Faites pointer votre navigateur vers __my_directory__ et laissez vous guider par l'installeur :
+[http://localhost/__my_directory__/](http://localhost/my_directory/)
 
 Présentation
 ====
