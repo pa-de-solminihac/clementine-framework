@@ -36,7 +36,7 @@ Un outil simple
 * Pas de _code généré_, pas de _fichiers de cache_ dont on ne retrouve plus la source : on reste sur du code interprété, plus facile à maintenir
 * Debug facilité : pour que vous ne laissiez plus passer la moindre _Notice_. Vous pouvez même être prévenu par e-mail.
 
-De la modularité partout
+De la modularité et de la flexibilité partout
 ---
 * Dans Clémentine, tout fonctionne sous forme de modules, même le coeur du framework... et tous les modules sont surchargeables, y compris les surcharges.
 * Le framework garantit de toujours pouvoir intercaler une classe à n'importe quel niveau de l'héritage. Comme on y prend vite goût, on a utilisé le concept partout : fichiers de configuration, contrôleurs, modèles, helpers, vues... on peut même utiliser l'héritage sur des modules entiers en quelques lignes.
@@ -54,12 +54,16 @@ Les performances sont excellentes
 ---
 Ce n'est pas parce qu'on n'utilise pas de code généré ou de fichiers cache que ça doit ramer... et ça ne rame pas du tout, promis !
 
-Lancez l'installeur, installez vos premiers modules
+À titre d'exemple, une page "hello world" est rendue en 2ms. Ça ne vaut sans doute pas un benchmark approfondi mais ça donne une idée du temps pris pour faire tourner le framework lui même.
+
+Alors... lancez l'installeur
 ---
 * Pour la première installation
 * Pour la gestion des mises à jour et migrations de la base de données
 * Pour la gestion des dépendances. Vous pouvez choisir d'imposer les versions de modules (si vous n'êtes pas prêt pour un passage de version majeure) : l'installeur choisira les versions des autres modules de manière à respecter ces choix sans casser la compatibilité
 * Vous pouvez même utiliser votre propre dépôt de modules si vous voulez
+
+Et laissez vous guider pour installez vos premiers modules !
 
 En savoir plus
 ---
