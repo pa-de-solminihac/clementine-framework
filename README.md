@@ -14,7 +14,7 @@ Présentation
 
 Clementine est un framework MVC pour PHP, c'est un logiciel libre sous licence MIT.
 
-Une expérience
+Issu d'une expérience...
 ---
 
 Clémentine est parti d'une frustration : il n'est pas toujours simple d'adapter les librairies qu'on importe dans un projet. 
