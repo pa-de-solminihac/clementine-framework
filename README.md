@@ -58,9 +58,8 @@ Lancez l'installeur, installez vos premiers modules
 ---
 * Pour la première installation
 * Pour la gestion des mises à jour et migrations de la base de données
-* Pour la gestion des dépendances. Vous pouvez même coller à des branches de développement si vous n'êtes pas prêt pour un passage de version majeure sans casser toute la compatibilité
-* Sauvegarde, et restauration en cas d'échec
-* Utilisez votre propre dépôt de modules si vous voulez (petit control freak ;))
+* Pour la gestion des dépendances. Vous pouvez choisir d'imposer les versions de modules (si vous n'êtes pas prêt pour un passage de version majeure) : l'installeur choisira les versions des autres modules de manière à respecter ces choix sans casser la compatibilité
+* Vous pouvez même utiliser votre propre dépôt de modules si vous voulez
 
 En savoir plus
 ---
