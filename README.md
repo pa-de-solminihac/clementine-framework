@@ -19,7 +19,7 @@ Issu d'une expérience...
 
 Clémentine est parti d'une frustration : il n'est pas toujours simple d'adapter les librairies qu'on importe dans un projet. 
 
-Souvent, elles ont été conçus pour être flexibles, avec des hooks par exemple, mais on tombe souvent sur un cas où un hook qui nous aurait bien arrangé n'existe pas.
+Même lorsqu'elles ont été conçues pour être flexibles, avec des hooks par exemple, on finit souvent par tomber sur un cas qui n'a pas encore été prévu. Par exemple ce hook qui nous aurait bien arrangé mais qui n'existe pas encore.
 
 Dans des cas un peu plus favorables, on peut utiliser de l'injection de dépendances.
 
@@ -27,7 +27,9 @@ On étend alors les librairies importées en utilisant des classes dérivées, a
 
 Et si le framework s'occupait automatiquement d'utiliser nos classes dérivées partout, à la place des classes d'origine ?
 
-C'est ce que fait Clémentine.
+L'expérience Clémentine est née. 
+
+Cette expérience a pris pour terreau un framework MVC inspiré de Zend Framework, pour devenir un outil resté simple, mais mature.
 
 Un outil simple
 ---
