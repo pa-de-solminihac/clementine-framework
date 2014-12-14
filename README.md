@@ -9,6 +9,11 @@ Installation
 * Décompressez la dans un dossier __my_directory__
 * Ouvrez le dossier __my_directory__ dans votre navigateur et laissez vous guider...
 
+Vous pouvez aussi copier coller la ligne de commande suivante :
+```bash
+wget -qO- https://github.com/pa-de-solminihac/clementine-framework/archive/master.tar.gz | tar -zxf -
+```
+
 Présentation
 ====
 
