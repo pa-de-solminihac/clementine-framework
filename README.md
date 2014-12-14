@@ -1,4 +1,4 @@
-[Clementine : framework MVC en PHP, logiciel libre](http://clementine.quai13.com/)
+[Clementine : framework MVC libre en PHP](http://clementine.quai13.com/)
 ===
 
 ![Clementine Framework logo](https://pa-de-solminihac.github.io/clementine-framework/logo.jpg)
@@ -6,7 +6,7 @@
 Installation
 ---
 * Récupérez la [dernière version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip) et décompressez la dans un dossier __my_directory__
-* Faites pointer votre navigateur vers __my_directory__ et laissez vous guider par l'installeur :
+* Pointez votre navigateur sur __my_directory__ et laissez vous guider par l'installeur :
 [http://localhost/__my_directory__/](http://localhost/my_directory/)
 
 Présentation
