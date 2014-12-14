@@ -65,6 +65,4 @@ Alors... lancez l'installeur
 
 Et laissez vous guider pour installez vos premiers modules !
 
-En savoir plus
----
-[Page de description](http://clementine.quai13.com/)
+[Site officiel](http://clementine.quai13.com/)
