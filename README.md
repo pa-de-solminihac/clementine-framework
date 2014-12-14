@@ -1,4 +1,4 @@
-[Clementine : framework MVC en PHP MVC, logiciel libre](http://clementine.quai13.com/)
+[Clementine : framework MVC en PHP, logiciel libre](http://clementine.quai13.com/)
 ===
 
 ![Clementine Framework logo](https://pa-de-solminihac.github.io/clementine-framework/logo.jpg)
