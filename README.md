@@ -11,7 +11,7 @@ wget -qO- https://github.com/pa-de-solminihac/clementine-framework/archive/maste
 ```
 
 * Faites pointer votre navigateur vers le dossier créé à l'étape précédente et laissez vous guider par l'installeur :
-http://localhost/clementine-framework-master/
+[http://localhost/clementine-framework-master/](http://localhost/clementine-framework-master/)
 
 Présentation
 ====
