@@ -77,7 +77,7 @@ Alors... lancez l'installeur
 Et laissez vous guider pour installez vos premiers modules !
 
 Installation
----
+===
 * Récupérez la [dernière version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip) et décompressez la dans un dossier __my_directory__
 * Pointez votre navigateur sur __my_directory__ et laissez vous guider par l'installeur :
 [http://localhost/__my_directory__/](http://localhost/my_directory/)
