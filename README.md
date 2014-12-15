@@ -17,7 +17,7 @@ Même lorsqu'elles ont été conçues pour être flexibles, avec des [hooks](htt
 
 Dans des cas un peu plus favorables, on peut utiliser de l'[injection de dépendances](http://en.wikipedia.org/wiki/Dependency_injection).
 
-On étend alors les librairies importées en utilisant des classes dérivées, afin de surcharger certains comportements et on injecte nos instances de classes dérivées à la place de ceux des classes d'origine... si l'injection de dépendances a été prévue à l'endroit qui nous intéresse. _Mais ce n'est malheureusement pas toujours le cas_.
+On étend alors les librairies importées en utilisant des classes dérivées, afin de surcharger certains comportements et on injecte nos instances de classes dérivées plutôt que de classes d'origine... si l'injection de dépendances a été prévue à l'endroit qui nous intéresse. _Mais ce n'est malheureusement pas toujours le cas_.
 
 On se retrouve alors à devoir _modifier le code source_ des librairies qu'on a importées. Et là, c'est le drame : on ne peut plus suivre facilement les mises à jour.
 
