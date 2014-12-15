@@ -21,9 +21,9 @@ On étend alors les librairies importées en utilisant des classes dérivées, a
 
 Et si le framework s'occupait automatiquement d'utiliser nos classes dérivées partout, à la place des classes d'origine ?
 
-L'expérience Clémentine est née. 
+__L'expérience Clémentine est née.__
 
-Cette expérience a pris pour terreau un framework MVC inspiré de Zend Framework, pour devenir un outil resté simple, mais mature.
+Cette expérience a pris pour terreau un _framework MVC_ inspiré de [Zend Framework](http://framework.zend.com/), pour devenir un outil resté simple, mais mature.
 
 Un outil simple
 ===
@@ -36,7 +36,9 @@ De la modularité partout
 
 Tout est surchargeable
 ---
-Le framework garantit de toujours pouvoir intercaler une classe à n'importe quel niveau de l'héritage. Comme on y prend vite goût, on a utilisé le concept partout : fichiers de configuration, contrôleurs, modèles, helpers, vues... on peut même utiliser l'héritage sur des modules entiers en quelques lignes.
+Le framework garantit de toujours pouvoir intercaler une classe à n'importe quel niveau de l'héritage.
+
+Comme on y prend vite goût, on a utilisé le concept partout : fichiers de configuration, contrôleurs, modèles, helpers, vues... on peut même utiliser l'héritage sur des modules entiers en quelques lignes.
 
 Par exemple si vous avez
 
