@@ -6,22 +6,24 @@
 Présentation
 ====
 
-Clementine est un framework MVC pour PHP, c'est un logiciel libre sous licence MIT.
+Clementine est un [framework MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pour PHP, c'est un logiciel libre sous [licence MIT](http://en.wikipedia.org/wiki/MIT_License).
 
 Issu d'une expérience...
 ---
 
-Clémentine est parti d'une frustration : il n'est pas toujours simple d'adapter les librairies qu'on importe dans un projet. 
+Clémentine est partie d'une frustration : quand on importe des librairies dans un projet web, on doit souvent les adapter à notre besoin. Et il n'est pas toujours facile de le faire proprement.
 
 Même lorsqu'elles ont été conçues pour être flexibles, avec des hooks par exemple, on finit souvent par tomber sur un cas qui n'a pas encore été prévu. Par exemple ce hook qui nous aurait bien arrangé mais qui n'existe pas encore.
 
 Dans des cas un peu plus favorables, on peut utiliser de l'injection de dépendances.
 
-On étend alors les librairies importées en utilisant des classes dérivées, afin de surcharger certains comportements et on injecte nos instances de classes dérivées à la place de ceux des classes d'origine... si l'injection de dépendances a été prévue à l'endroit qui nous intéresse.
+On étend alors les librairies importées en utilisant des classes dérivées, afin de surcharger certains comportements et on injecte nos instances de classes dérivées à la place de ceux des classes d'origine... si l'injection de dépendances a été prévue à l'endroit qui nous intéresse. Et ce n'est pas toujours le cas.
 
-Et si le framework s'occupait automatiquement d'utiliser nos classes dérivées partout, à la place des classes d'origine ?
+On se retrouve alors à devoir modifier le code source des librairies qu'on a importées. On ne peut alors plus suivre facilement les mises à jour.
 
-__L'expérience Clémentine est née.__
+Et si un framework s'occupait automatiquement d'utiliser nos classes dérivées partout, à la place des classes d'origine ? Plus besoin de modifier le code source des classes qu'on a importées ! Nos modifications restent dans nos fichiers, elles sont prises en compte automatiquement, et on peut mettre à jour nos librairies plus sereinement.
+
+__L'expérience Clémentine était née.__
 
 Cette expérience a pris pour terreau un _framework MVC_ inspiré de [Zend Framework](http://framework.zend.com/), pour devenir un outil resté simple, mais mature.
 
