@@ -3,12 +3,6 @@
 
 ![Clementine Framework logo](https://pa-de-solminihac.github.io/clementine-framework/logo.jpg)
 
-Installation
----
-* Récupérez la [dernière version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip) et décompressez la dans un dossier __my_directory__
-* Pointez votre navigateur sur __my_directory__ et laissez vous guider par l'installeur :
-[http://localhost/__my_directory__/](http://localhost/my_directory/)
-
 Présentation
 ====
 
@@ -32,14 +26,17 @@ L'expérience Clémentine est née.
 Cette expérience a pris pour terreau un framework MVC inspiré de Zend Framework, pour devenir un outil resté simple, mais mature.
 
 Un outil simple
----
+===
 * Pas de _code généré_, pas de _fichiers de cache_ dont on ne retrouve plus la source : on reste sur du code interprété, plus facile à maintenir
 * Debug facilité : pour que vous ne laissiez plus passer la moindre _Notice_. Vous pouvez même être prévenu par e-mail.
 
-De la modularité et de la flexibilité partout
+De la modularité partout
 ---
 * Dans Clémentine, tout fonctionne sous forme de modules, même le coeur du framework... et tous les modules sont surchargeables, y compris les surcharges.
-* Le framework garantit de toujours pouvoir intercaler une classe à n'importe quel niveau de l'héritage. Comme on y prend vite goût, on a utilisé le concept partout : fichiers de configuration, contrôleurs, modèles, helpers, vues... on peut même utiliser l'héritage sur des modules entiers en quelques lignes.
+
+Tout est surchargeable
+---
+Le framework garantit de toujours pouvoir intercaler une classe à n'importe quel niveau de l'héritage. Comme on y prend vite goût, on a utilisé le concept partout : fichiers de configuration, contrôleurs, modèles, helpers, vues... on peut même utiliser l'héritage sur des modules entiers en quelques lignes.
 
 Par exemple si vous avez
 
@@ -64,5 +61,11 @@ Alors... lancez l'installeur
 * Vous pouvez même utiliser votre propre dépôt de modules si vous voulez
 
 Et laissez vous guider pour installez vos premiers modules !
+
+Installation
+---
+* Récupérez la [dernière version](http://clementine.quai13.com/repository/clementine-framework/clementine-framework.zip) et décompressez la dans un dossier __my_directory__
+* Pointez votre navigateur sur __my_directory__ et laissez vous guider par l'installeur :
+[http://localhost/__my_directory__/](http://localhost/my_directory/)
 
 [Site officiel](http://clementine.quai13.com/)
