@@ -6,10 +6,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L]
 
-# Pour plus de securite, on redirige aussi l'appel à ces fichiers même s'ils existent vers la 404
-RewriteRule ^.*\.ini index.php [L]
-RewriteRule ^.*\.svn index.php [L]
-RewriteRule ^.*\.install_temp index.php [L]
+# Pour plus de securite, on redirige aussi l'appel à certains fichiers ou dossiers même s'ils existent vers la 404
+RewriteRule ^.*\.svn/.* index.php [L,NC]
+RewriteRule ^.*\.git/.* index.php [L,NC]
+RewriteRule ^.*\.install_temp/* index.php [L,NC]
+RewriteCond %{REQUEST_FILENAME} \.(ini)$ [NC]
+RewriteRule ^(.*)$ index.php [L,NC]
 
 # Utilise la page d'erreur 404 meme pour les URL non reecrites
 RewriteCond %{ENV:REDIRECT_STATUS} !=404
@@ -21,21 +23,21 @@ RewriteRule .* err404/index [L]
 <IfModule mod_expires.c>
     <FilesMatch "(?i)^.*\.(ico|flv|swf|jpg|jpeg|png|gif|js|css)$">
         ExpiresActive On
-        ExpiresDefault "access plus 5 seconds"
-        ExpiresByType image/jpg "access plus 5 seconds" 
-        ExpiresByType image/jpeg "access plus 5 seconds" 
-        ExpiresByType image/png "access plus 5 seconds" 
-        ExpiresByType image/gif "access plus 5 seconds" 
-        ExpiresByType image/ico "access plus 5 seconds" 
-        ExpiresByType image/icon "access plus 5 seconds" 
-        ExpiresByType image/x-icon "access plus 5 seconds" 
-        ExpiresByType text/css "access plus 5 seconds" 
-        ExpiresByType text/javascript "access plus 5 seconds" 
-        ExpiresByType text/html "access plus 5 seconds" 
-        ExpiresByType application/xhtml+xml "access plus 5 seconds" 
-        ExpiresByType application/javascript "access plus 5 seconds" 
-        ExpiresByType application/x-javascript "access plus 5 seconds" 
-        ExpiresByType application/x-shockwave-flash "access plus 5 seconds"  
+        ExpiresDefault "access plus 5 minutes"
+        ExpiresByType image/jpg "access plus 5 minutes"
+        ExpiresByType image/jpeg "access plus 5 minutes"
+        ExpiresByType image/png "access plus 5 minutes"
+        ExpiresByType image/gif "access plus 5 minutes"
+        ExpiresByType image/ico "access plus 5 minutes"
+        ExpiresByType image/icon "access plus 5 minutes"
+        ExpiresByType image/x-icon "access plus 5 minutes"
+        ExpiresByType text/css "access plus 5 minutes"
+        ExpiresByType text/javascript "access plus 5 minutes"
+        ExpiresByType text/html "access plus 5 minutes"
+        ExpiresByType application/xhtml+xml "access plus 5 minutes"
+        ExpiresByType application/javascript "access plus 5 minutes"
+        ExpiresByType application/x-javascript "access plus 5 minutes"
+        ExpiresByType application/x-shockwave-flash "access plus 5 minutes"
         <IfModule mod_headers.c>
             Header set Cache-Control "public, no-transform"
         </IfModule>
@@ -55,3 +57,6 @@ RewriteRule .* err404/index [L]
 #    </IfModule>
 #    Header set Cache-Control "public, no-transform, no-store, no-cache, must-revalidate, pre-check=0, post-check=0, max-age=0"
 #</IfModule>
+# Sous une app cordova version IOS, pour contourner l'erreur "Failed to load a resource: The network connection was lost")
+# cf. http://stackoverflow.com/questions/33895463/safari-ajax-request-failed-to-load-resource-the-network-connection-was-lost
+#SetEnv nokeepalive
