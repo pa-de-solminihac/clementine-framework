@@ -23,4 +23,3 @@ class siteIndexController extends siteIndexController_Parent
     }
 
 }
-?>

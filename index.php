@@ -62,4 +62,3 @@ if (!$maintenance_mode && file_exists('app/share/core/lib/index.php')) {
 </html><?php
     }
 }
-?>

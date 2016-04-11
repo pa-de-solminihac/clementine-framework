@@ -36,4 +36,3 @@ log_errors=1
 </p>
 <?php
 $this->getBlock('design/footer', $data);
-?>
