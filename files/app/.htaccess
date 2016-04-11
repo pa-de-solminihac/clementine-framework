@@ -1,2 +1,2 @@
-order allow,deny
-deny from all
+RewriteEngine On
+RewriteRule .* ../../index.php [L]

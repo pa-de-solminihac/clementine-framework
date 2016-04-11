@@ -1,6 +1,9 @@
 AddDefaultCharset UTF-8
 RewriteEngine On
 
+# interdit l'accès au contenu du dossier app
+RewriteRule ^app/.* index.php [L,NC]
+
 # Redirige tout vers l'index : c'est le point d'entree du MVC
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
