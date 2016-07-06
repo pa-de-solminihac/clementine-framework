@@ -13,6 +13,7 @@ RewriteRule .* index.php [L]
 RewriteRule ^.*\.svn/.* index.php [L,NC]
 RewriteRule ^.*\.git/.* index.php [L,NC]
 RewriteRule ^.*\.install_temp/* index.php [L,NC]
+RewriteCond %{REQUEST_FILENAME} README.md [OR]
 RewriteCond %{REQUEST_FILENAME} \.(ini)$ [NC]
 RewriteRule ^(.*)$ index.php [L,NC]
 
@@ -24,12 +25,13 @@ RewriteRule .* err404/index [L]
 
 # Forcer l'activation du cache (site en production)
 <IfModule mod_expires.c>
-    <FilesMatch "(?i)^.*\.(ico|flv|swf|jpg|jpeg|png|gif|js|css)$">
+    <FilesMatch "(?i)^.*\.(ico|flv|swf|jpg|jpeg|png|gif|js|css|svg)$">
         ExpiresActive On
         ExpiresDefault "access plus 5 minutes"
         ExpiresByType image/jpg "access plus 5 minutes"
         ExpiresByType image/jpeg "access plus 5 minutes"
         ExpiresByType image/png "access plus 5 minutes"
+        ExpiresByType image/svg+xml "access plus 5 minutes"
         ExpiresByType image/gif "access plus 5 minutes"
         ExpiresByType image/ico "access plus 5 minutes"
         ExpiresByType image/icon "access plus 5 minutes"
@@ -46,7 +48,7 @@ RewriteRule .* err404/index [L]
         </IfModule>
     </FilesMatch>
     <IfModule mod_deflate.c>
-        <FilesMatch "\.(js|css)$">
+        <FilesMatch "\.(js|css|svg)$">
             SetOutputFilter DEFLATE
         </FilesMatch>
     </IfModule>
