@@ -15,8 +15,15 @@ if (!$maintenance_mode && file_exists('app/share/core/lib/index.php')) {
         define('__BASE_URL__', $tmp);
     }
     define('__FILES_ROOT__'     , str_replace('//', '/', $_SERVER['DOCUMENT_ROOT'] . __BASE_URL__));
-    define('__WWW_ROOT__'       , 'http://' . $_SERVER['SERVER_NAME'] . __BASE_URL__);
-
+    $protocol = 'http://';
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']) {
+        $protocol = 'https://';
+    }
+    $www_root = $_SERVER['SERVER_NAME'];
+    if (!empty($_SERVER['HTTP_HOST'])) {
+        $www_root = $_SERVER['HTTP_HOST'];
+    }
+    define('__WWW_ROOT__'       , $protocol . $www_root . __BASE_URL__);
     $maintenance_file = 'app/local/site/maintenance.php';
     if (file_exists($maintenance_file)) {
         require $maintenance_file;
