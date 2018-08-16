@@ -1,6 +1,6 @@
 <?php
 $maintenance_mode = 0;
-if (!$maintenance_mode && file_exists('app/share/core/lib/index.php')) {
+if (!$maintenance_mode && file_exists(dirname(__FILE__) . '/app/share/core/lib/index.php')) {
     require 'app/share/core/lib/index.php';
 } else {
     // definition de quelques constantes de base
@@ -68,4 +68,10 @@ if (!$maintenance_mode && file_exists('app/share/core/lib/index.php')) {
 </body>
 </html><?php
     }
+}
+$php_self = strtolower(preg_replace('/-.*/', '',
+    preg_replace('/.*\//', '', $_SERVER['PHP_SELF'])));
+if ($php_self == 'phpunit') {
+    // prevent error "Class 'index' could not be found in '.../index.php'."
+    die();
 }
