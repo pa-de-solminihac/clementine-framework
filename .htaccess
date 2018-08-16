@@ -1,29 +1,31 @@
+# BEGIN Clementine
 AddDefaultCharset UTF-8
 RewriteEngine On
-
 # interdit l'accès au contenu du dossier app
 RewriteRule ^app/.* index.php [L,NC]
-
-# Redirige tout vers l'index : c'est le point d'entree du MVC
+# redirige tout vers l'index : c'est le point d'entree du MVC
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L]
-
-# Pour plus de securite, on redirige aussi l'appel à certains fichiers ou dossiers même s'ils existent vers la 404
+# pour plus de securite, on redirige aussi l'appel à certains fichiers ou dossiers même s'ils existent vers la 404
 RewriteRule ^.*\.svn/.* index.php [L,NC]
 RewriteRule ^.*\.git/.* index.php [L,NC]
+RewriteRule ^.*\.DS_Store index.php [L,NC]
 RewriteRule ^.*\.install_temp/* index.php [L,NC]
 RewriteCond %{REQUEST_FILENAME} .gitignore [OR]
 RewriteCond %{REQUEST_FILENAME} README.md [OR]
 RewriteCond %{REQUEST_FILENAME} \.(ini)$ [NC]
 RewriteRule ^(.*)$ index.php [L,NC]
-
 # Utilise la page d'erreur 404 meme pour les URL non reecrites
 RewriteCond %{ENV:REDIRECT_STATUS} !=404
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* err404/index [L]
-
+<IfModule mod_headers.c>
+    Header set X-Frame-Options SAMEORIGIN
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
 # Forcer l'activation du cache (site en production)
 <IfModule mod_expires.c>
     <FilesMatch "(?i)^.*\.(ico|flv|swf|jpg|jpeg|png|gif|js|css|svg)$">
@@ -66,3 +68,4 @@ RewriteRule .* err404/index [L]
 # Sous une app cordova version IOS, pour contourner l'erreur "Failed to load a resource: The network connection was lost")
 # cf. http://stackoverflow.com/questions/33895463/safari-ajax-request-failed-to-load-resource-the-network-connection-was-lost
 #SetEnv nokeepalive
+# END Clementine
